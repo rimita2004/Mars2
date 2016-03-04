@@ -1,1 +1,123 @@
-<xml xmlns="http://www.w3.org/1999/xhtml"></xml>
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="controls_if" id="84" inline="false" x="-5" y="-5"></block>
+  <block type="controls_whileUntil" id="16" inline="false" x="102" y="1">
+    <field name="MODE">UNTIL</field>
+    <value name="NUMBER">
+      <block type="sensor_button" id="31">
+        <field name="OBJECT">UP</field>
+      </block>
+    </value>
+    <statement name="DO">
+      <block type="controls_if" id="68" inline="false"></block>
+    </statement>
+  </block>
+  <block type="controls_whileUntil" id="157" inline="false" x="-5" y="83">
+    <field name="MODE">WHILE</field>
+  </block>
+  <block type="controls_whileUntil" id="213" inline="false" x="171" y="282">
+    <field name="MODE">UNTIL</field>
+    <value name="NUMBER">
+      <block type="sensor_button" id="230">
+        <field name="OBJECT">ENTER</field>
+      </block>
+    </value>
+    <statement name="DO">
+      <block type="controls_if" id="200" inline="false">
+        <mutation elseif="1" else="1"></mutation>
+        <value name="IF0">
+          <block type="logic_compare" id="715" inline="true">
+            <field name="OP">LT</field>
+            <value name="A">
+              <block type="sensor_object" id="335">
+                <field name="OBJECT">LEFTFRONT</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="math_number" id="722">
+                <field name="NUM">75</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="movement_setmotors" id="392" inline="true">
+            <value name="BOTHMOVLEFT">
+              <block type="math_number" id="594">
+                <field name="NUM">98</field>
+              </block>
+            </value>
+            <value name="BOTHMOVRIGHT">
+              <block type="math_number" id="602">
+                <field name="NUM">82</field>
+              </block>
+            </value>
+          </block>
+        </statement>
+        <value name="IF1">
+          <block type="logic_compare" id="729" inline="true">
+            <field name="OP">LT</field>
+            <value name="A">
+              <block type="sensor_object" id="541">
+                <field name="OBJECT">RIGHTFRONT</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="math_number" id="736">
+                <field name="NUM">75</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO1">
+          <block type="movement_setmotors" id="519" inline="true">
+            <value name="BOTHMOVLEFT">
+              <block type="math_number" id="743">
+                <field name="NUM">98</field>
+              </block>
+            </value>
+            <value name="BOTHMOVRIGHT">
+              <block type="math_number" id="616">
+                <field name="NUM">82</field>
+              </block>
+            </value>
+          </block>
+        </statement>
+        <statement name="ELSE">
+          <block type="movement_setmotors" id="587" inline="true">
+            <value name="BOTHMOVLEFT">
+              <block type="math_number" id="623">
+                <field name="NUM">98</field>
+              </block>
+            </value>
+            <value name="BOTHMOVRIGHT">
+              <block type="math_number" id="630">
+                <field name="NUM">82</field>
+              </block>
+            </value>
+          </block>
+        </statement>
+        <next>
+          <block type="robot_delay" id="269" inline="true">
+            <value name="DELAY">
+              <block type="math_number" id="296">
+                <field name="NUM">100</field>
+              </block>
+            </value>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <next>
+      <block type="movement_stop" id="280"></block>
+    </next>
+  </block>
+  <block type="comment_comment" id="282" x="-106" y="297">
+    <field name="TEXT"></field>
+  </block>
+  <block type="controls_if" id="257" inline="false" x="926" y="620">
+    <mutation else="1"></mutation>
+  </block>
+  <block type="expansion_exp2power" id="163" x="808" y="787">
+    <field name="SERVO">ON</field>
+  </block>
+</xml>
