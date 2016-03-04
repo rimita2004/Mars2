@@ -107,9 +107,6 @@
         </next>
       </block>
     </statement>
-    <next>
-      <block type="movement_stop" id="280"></block>
-    </next>
   </block>
   <block type="comment_comment" id="282" x="-106" y="297">
     <field name="TEXT"></field>
