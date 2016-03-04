@@ -114,10 +114,4 @@
   <block type="comment_comment" id="282" x="-106" y="297">
     <field name="TEXT"></field>
   </block>
-  <block type="controls_if" id="257" inline="false" x="926" y="620">
-    <mutation else="1"></mutation>
-  </block>
-  <block type="expansion_exp2power" id="163" x="808" y="787">
-    <field name="SERVO">ON</field>
-  </block>
 </xml>
